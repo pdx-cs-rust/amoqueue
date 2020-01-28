@@ -51,7 +51,9 @@ fn test_basic() {
     q.push_tail(&s[0]);
     q.push_tail(&s[1]);
     assert_eq!(Some(&1), q.pop_head());
+    q.push_tail(&3);
     assert_eq!(Some(&2), q.pop_head());
+    assert_eq!(Some(&3), q.pop_head());
     assert!(q.is_empty());
     assert_eq!(None, q.pop_head());
 }
